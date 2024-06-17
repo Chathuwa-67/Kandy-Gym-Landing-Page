@@ -4,9 +4,107 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Kandy</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <!-- Font Awesome Cdn  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Custom Css  -->
+  <style>
+    .font-manrope {
+      font-family: 'Manrope', sans-serif;
+    }
+  </style>
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Custom Tailwind  -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#FF4240',
+            textColor: '#13131899'
+          }
+        }
+      }
+    }
+  </script>
 </head>
 <body>
-  
+   <!-- Navbar  -->
+    <div class="navbar bg-base-100 py-16">
+      <div class="navbar-start">
+        <div class="dropdown">
+          <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+            </svg>
+          </div>
+          <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+            <li><a>Home</a></li>
+            <li><a>About</a></li>
+            <li><a>Pages</a></li>
+            <li><a>Blog</a></li>
+            <li><a>Contact</a></li>
+          </ul>
+        </div>
+        <a class="btn btn-ghost text-xl">daisyUI</a>
+      </div>
+      <div class="navbar-center hidden lg:flex">
+        <ul class="menu menu-horizontal px-1">
+          <li><a class="font-semibold hover:bg-transparent hover:text-primary">Home</a></li>
+          <li><a class="font-semibold hover:bg-transparent hover:text-primary">About</a></li>
+          <li><a class="font-semibold hover:bg-transparent hover:text-primary">Pages</a></li>
+          <li><a class="font-semibold hover:bg-transparent hover:text-primary">Blog</a></li>
+          <li><a class="font-semibold hover:bg-transparent hover:text-primary">Contact</a></li>
+        </ul>
+      </div>
+      <div class="navbar-end">
+        <a class="btn bg-primary text-white hover:bg-primary px-6">Book Reservation</a>
+      </div>
+    </div>
+
+    <!-- Banner Section  -->
+
+    <div class="md:relative">
+      <div class="carousel w-full h-[250px] md:h-[350px] lg:h-[550px] rounded-2xl">
+        <div id="slide1" class="carousel-item relative w-full">
+          <img src="Images/1.png" class="w-full object-cover object-center" />
+          <div
+            class="absolute flex justify-between transform -translate-y-1/2 bottom-[2%] left-[35%] right-[33%] top-[85%] md:bottom-[13%] md:left-[4%] md:right-[82%] lg:right-[87%]">
+            <a href="#slide2" class="btn bg-[#131318] text-white border-none btn-circle">❮</a>
+            <a href="#slide2" class="btn bg-[#131318] text-white border-none btn-circle">❯</a>
+          </div>
+        </div>
+        <div id="slide2" class="carousel-item relative w-full">
+          <img src="Images/2.png" class="w-full object-cover object-center" />
+          <div
+            class="absolute flex justify-between transform -translate-y-1/2 bottom-[2%] left-[35%] right-[33%] top-[85%] md:bottom-[13%] md:left-[4%] md:right-[82%] lg:right-[87%]">
+            <a href="#slide1" class="btn bg-[#131318] text-white border-none btn-circle">❮</a>
+            <a href="#slide1" class="btn bg-[#131318] text-white border-none btn-circle">❯</a>
+          </div>
+        </div>
+      </div>
+      <div class="bg-[#131318] p-4 rounded-2xl mt-4 md:w-[500px] md:absolute right-[3%] bottom-[6%]">
+        <h3 class="text-white font-extrabold text-lg">
+    Book Your Trainer
+        </h3>
+        <p class="text-[#ffffff99] text-sm font-medium leading-6">
+          Kandy Gym Zone
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <!-- Header End  -->
+
 </body>
 </html>
